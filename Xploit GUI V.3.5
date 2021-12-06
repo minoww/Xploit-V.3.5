@@ -64,49 +64,44 @@ local UICorner_22 = Instance.new("UICorner")
 local Shadow_11 = Instance.new("Frame")
 local UICorner_23 = Instance.new("UICorner")
 local TextLabel_11 = Instance.new("TextLabel")
-local Reach = Instance.new("TextButton")
+local TPtab = Instance.new("Frame")
+local bank = Instance.new("TextButton")
 local UICorner_24 = Instance.new("UICorner")
 local Shadow_12 = Instance.new("Frame")
 local UICorner_25 = Instance.new("UICorner")
 local TextLabel_12 = Instance.new("TextLabel")
-local TPtab = Instance.new("Frame")
-local bank = Instance.new("TextButton")
+local guns = Instance.new("TextButton")
 local UICorner_26 = Instance.new("UICorner")
 local Shadow_13 = Instance.new("Frame")
 local UICorner_27 = Instance.new("UICorner")
 local TextLabel_13 = Instance.new("TextLabel")
-local guns = Instance.new("TextButton")
+local rpg = Instance.new("TextButton")
 local UICorner_28 = Instance.new("UICorner")
 local Shadow_14 = Instance.new("Frame")
 local UICorner_29 = Instance.new("UICorner")
 local TextLabel_14 = Instance.new("TextLabel")
-local rpg = Instance.new("TextButton")
+local armor = Instance.new("TextButton")
 local UICorner_30 = Instance.new("UICorner")
 local Shadow_15 = Instance.new("Frame")
 local UICorner_31 = Instance.new("UICorner")
 local TextLabel_15 = Instance.new("TextLabel")
-local armor = Instance.new("TextButton")
-local UICorner_32 = Instance.new("UICorner")
-local Shadow_16 = Instance.new("Frame")
-local UICorner_33 = Instance.new("UICorner")
-local TextLabel_16 = Instance.new("TextLabel")
 local TextBox = Instance.new("TextBox")
-local UICorner_34 = Instance.new("UICorner")
+local UICorner_32 = Instance.new("UICorner")
 local goto = Instance.new("TextButton")
+local UICorner_33 = Instance.new("UICorner")
+local Shadow_16 = Instance.new("Frame")
+local UICorner_34 = Instance.new("UICorner")
+local TextLabel_16 = Instance.new("TextLabel")
+local View = Instance.new("TextButton")
 local UICorner_35 = Instance.new("UICorner")
 local Shadow_17 = Instance.new("Frame")
 local UICorner_36 = Instance.new("UICorner")
 local TextLabel_17 = Instance.new("TextLabel")
-local View = Instance.new("TextButton")
+local unView = Instance.new("TextButton")
 local UICorner_37 = Instance.new("UICorner")
 local Shadow_18 = Instance.new("Frame")
 local UICorner_38 = Instance.new("UICorner")
 local TextLabel_18 = Instance.new("TextLabel")
-local unView = Instance.new("TextButton")
-local UICorner_39 = Instance.new("UICorner")
-local Shadow_19 = Instance.new("Frame")
-local UICorner_40 = Instance.new("UICorner")
-local TextLabel_19 = Instance.new("TextLabel")
 local hint = Instance.new("TextLabel")
 local note = Instance.new("TextLabel")
 
@@ -882,112 +877,6 @@ TextLabel_11.TextScaled = true
 TextLabel_11.TextSize = 14.000
 TextLabel_11.TextWrapped = true
 
-Reach.Name = "Reach"
-Reach.Parent = maintab
-Reach.BackgroundColor3 = Color3.fromRGB(55, 206, 223)
-Reach.BorderSizePixel = 0
-Reach.Position = UDim2.new(0.0154185016, 0, 0.673652649, 0)
-Reach.Size = UDim2.new(0, 142, 0, 28)
-Reach.ZIndex = 2
-Reach.Font = Enum.Font.GothamSemibold
-Reach.Text = ""
-Reach.TextColor3 = Color3.fromRGB(255, 255, 255)
-Reach.TextScaled = true
-Reach.TextSize = 14.000
-Reach.TextWrapped = true
-Reach.MouseButton1Down:connect(function()
-	game.StarterGui:SetCore("SendNotification", {
-		Title = "https://discord.gg/Y6Z46nBwhA";
-		Text = "Melee Reach Enabled."
-	})
-	LP = game.Players.LocalPlayer 
-
-	for i,v in ipairs(LP.Character:GetDescendants()) do 
-
-		if v:IsA("MeshPart") then v.Massless = true 
-
-			v.CanCollide = false 
-
-			v.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0) 
-
-
-		end 
-
-	end 
-
-
-	for i,v in ipairs(game.workspace:GetDescendants()) do 
-
-		if v:IsA("Seat") then 
-
-			v.Disabled = true 
-
-		end 
-
-	end 
-
-	x = 45
-
-	y = 45 
-
-	z = 45
-
-
-
-	penis = Vector3.new(x,y,z) 
-
-
-	LP.Character.RightHand.Size = penis 
-
-
-	local selectionBox = Instance.new("SelectionBox",LP.Character.RightHand) 
-
-	selectionBox.Adornee = LP.Character.RightHand 
-	selectionBox = Enum.Material.Neon
-	selectionBox.Color3 = Color3.new(1, 1, 1)  
-
-	LP.Character.LeftHand.Size = penis 
-
-	LP.Character.BodyEffects.SpecialParts.LeftHand.Size = penis 
-
-
-
-	local selectionBox = Instance.new("SelectionBox",LP.Character.LeftHand) 
-
-	selectionBox.Adornee = LP.Character.LeftHand 
-	selectionBox = Enum.Material.Neon
-	selectionBox.Color3 = Color3.new(1, 1, 1) 
-
-end)
-
-UICorner_24.CornerRadius = UDim.new(0, 4)
-UICorner_24.Parent = Reach
-
-Shadow_12.Name = "Shadow"
-Shadow_12.Parent = Reach
-Shadow_12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Shadow_12.BorderSizePixel = 0
-Shadow_12.Size = UDim2.new(1, 0, 1, 4)
-
-UICorner_25.CornerRadius = UDim.new(0, 4)
-UICorner_25.Parent = Shadow_12
-
-TextLabel_12.Parent = Reach
-TextLabel_12.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_12.BackgroundTransparency = 1.000
-TextLabel_12.BorderColor3 = Color3.fromRGB(27, 42, 53)
-TextLabel_12.BorderSizePixel = 0
-TextLabel_12.Position = UDim2.new(0.517921567, 0, 0.544642687, 0)
-TextLabel_12.Size = UDim2.new(1.11908615, -20, 1.4821434, -20)
-TextLabel_12.ZIndex = 2
-TextLabel_12.Font = Enum.Font.FredokaOne
-TextLabel_12.Text = "Reach"
-TextLabel_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_12.TextScaled = true
-TextLabel_12.TextSize = 14.000
-TextLabel_12.TextWrapped = true
-
 TPtab.Name = "TPtab"
 TPtab.Parent = main
 TPtab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1012,33 +901,33 @@ bank.MouseButton1Down:connect(function()
 	game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-434.60995483398, 38.971572875977, -284.18685913086)
 end)
 
-UICorner_26.CornerRadius = UDim.new(0, 4)
-UICorner_26.Parent = bank
+UICorner_24.CornerRadius = UDim.new(0, 4)
+UICorner_24.Parent = bank
 
-Shadow_13.Name = "Shadow"
-Shadow_13.Parent = bank
-Shadow_13.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Shadow_13.BorderSizePixel = 0
-Shadow_13.Size = UDim2.new(1, 0, 1, 4)
+Shadow_12.Name = "Shadow"
+Shadow_12.Parent = bank
+Shadow_12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Shadow_12.BorderSizePixel = 0
+Shadow_12.Size = UDim2.new(1, 0, 1, 4)
 
-UICorner_27.CornerRadius = UDim.new(0, 4)
-UICorner_27.Parent = Shadow_13
+UICorner_25.CornerRadius = UDim.new(0, 4)
+UICorner_25.Parent = Shadow_12
 
-TextLabel_13.Parent = bank
-TextLabel_13.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_13.BackgroundTransparency = 1.000
-TextLabel_13.BorderColor3 = Color3.fromRGB(27, 42, 53)
-TextLabel_13.BorderSizePixel = 0
-TextLabel_13.Position = UDim2.new(0.496478885, 0, 0.462582707, 0)
-TextLabel_13.Size = UDim2.new(1.00577819, -20, 1.46087968, -20)
-TextLabel_13.ZIndex = 2
-TextLabel_13.Font = Enum.Font.FredokaOne
-TextLabel_13.Text = "Bank"
-TextLabel_13.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_13.TextScaled = true
-TextLabel_13.TextSize = 14.000
-TextLabel_13.TextWrapped = true
+TextLabel_12.Parent = bank
+TextLabel_12.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.BackgroundTransparency = 1.000
+TextLabel_12.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_12.BorderSizePixel = 0
+TextLabel_12.Position = UDim2.new(0.496478885, 0, 0.462582707, 0)
+TextLabel_12.Size = UDim2.new(1.00577819, -20, 1.46087968, -20)
+TextLabel_12.ZIndex = 2
+TextLabel_12.Font = Enum.Font.FredokaOne
+TextLabel_12.Text = "Bank"
+TextLabel_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_12.TextScaled = true
+TextLabel_12.TextSize = 14.000
+TextLabel_12.TextWrapped = true
 
 guns.Name = "guns"
 guns.Parent = TPtab
@@ -1057,33 +946,33 @@ guns.MouseButton1Down:connect(function()
 	game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-870.59393310547, -32.917030334473, -535.66650390625)
 end)
 
-UICorner_28.CornerRadius = UDim.new(0, 4)
-UICorner_28.Parent = guns
+UICorner_26.CornerRadius = UDim.new(0, 4)
+UICorner_26.Parent = guns
 
-Shadow_14.Name = "Shadow"
-Shadow_14.Parent = guns
-Shadow_14.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Shadow_14.BorderSizePixel = 0
-Shadow_14.Size = UDim2.new(1, 0, 1, 4)
+Shadow_13.Name = "Shadow"
+Shadow_13.Parent = guns
+Shadow_13.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Shadow_13.BorderSizePixel = 0
+Shadow_13.Size = UDim2.new(1, 0, 1, 4)
 
-UICorner_29.CornerRadius = UDim.new(0, 4)
-UICorner_29.Parent = Shadow_14
+UICorner_27.CornerRadius = UDim.new(0, 4)
+UICorner_27.Parent = Shadow_13
 
-TextLabel_14.Parent = guns
-TextLabel_14.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_14.BackgroundTransparency = 1.000
-TextLabel_14.BorderColor3 = Color3.fromRGB(27, 42, 53)
-TextLabel_14.BorderSizePixel = 0
-TextLabel_14.Position = UDim2.new(0.489752531, 0, 0.462582707, 0)
-TextLabel_14.Size = UDim2.new(1.06274855, -20, 1.46087968, -20)
-TextLabel_14.ZIndex = 2
-TextLabel_14.Font = Enum.Font.FredokaOne
-TextLabel_14.Text = "DB / Rev"
-TextLabel_14.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_14.TextScaled = true
-TextLabel_14.TextSize = 14.000
-TextLabel_14.TextWrapped = true
+TextLabel_13.Parent = guns
+TextLabel_13.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.BackgroundTransparency = 1.000
+TextLabel_13.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_13.BorderSizePixel = 0
+TextLabel_13.Position = UDim2.new(0.489752531, 0, 0.462582707, 0)
+TextLabel_13.Size = UDim2.new(1.06274855, -20, 1.46087968, -20)
+TextLabel_13.ZIndex = 2
+TextLabel_13.Font = Enum.Font.FredokaOne
+TextLabel_13.Text = "DB / Rev"
+TextLabel_13.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_13.TextScaled = true
+TextLabel_13.TextSize = 14.000
+TextLabel_13.TextWrapped = true
 
 rpg.Name = "rpg"
 rpg.Parent = TPtab
@@ -1102,33 +991,33 @@ rpg.MouseButton1Down:connect(function()
 	game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-788.10729980469, -39.649211883545, -931.38781738281)
 end)
 
-UICorner_30.CornerRadius = UDim.new(0, 4)
-UICorner_30.Parent = rpg
+UICorner_28.CornerRadius = UDim.new(0, 4)
+UICorner_28.Parent = rpg
 
-Shadow_15.Name = "Shadow"
-Shadow_15.Parent = rpg
-Shadow_15.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Shadow_15.BorderSizePixel = 0
-Shadow_15.Size = UDim2.new(1, 0, 1, 4)
+Shadow_14.Name = "Shadow"
+Shadow_14.Parent = rpg
+Shadow_14.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Shadow_14.BorderSizePixel = 0
+Shadow_14.Size = UDim2.new(1, 0, 1, 4)
 
-UICorner_31.CornerRadius = UDim.new(0, 4)
-UICorner_31.Parent = Shadow_15
+UICorner_29.CornerRadius = UDim.new(0, 4)
+UICorner_29.Parent = Shadow_14
 
-TextLabel_15.Parent = rpg
-TextLabel_15.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_15.BackgroundTransparency = 1.000
-TextLabel_15.BorderColor3 = Color3.fromRGB(27, 42, 53)
-TextLabel_15.BorderSizePixel = 0
-TextLabel_15.Position = UDim2.new(0.489752531, 0, 0.4375, 0)
-TextLabel_15.Size = UDim2.new(1.06274855, -20, 1.6250006, -20)
-TextLabel_15.ZIndex = 2
-TextLabel_15.Font = Enum.Font.FredokaOne
-TextLabel_15.Text = "Cheap RPG"
-TextLabel_15.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_15.TextScaled = true
-TextLabel_15.TextSize = 14.000
-TextLabel_15.TextWrapped = true
+TextLabel_14.Parent = rpg
+TextLabel_14.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.BackgroundTransparency = 1.000
+TextLabel_14.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_14.BorderSizePixel = 0
+TextLabel_14.Position = UDim2.new(0.489752531, 0, 0.4375, 0)
+TextLabel_14.Size = UDim2.new(1.06274855, -20, 1.6250006, -20)
+TextLabel_14.ZIndex = 2
+TextLabel_14.Font = Enum.Font.FredokaOne
+TextLabel_14.Text = "Cheap RPG"
+TextLabel_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_14.TextScaled = true
+TextLabel_14.TextSize = 14.000
+TextLabel_14.TextWrapped = true
 
 armor.Name = "armor"
 armor.Parent = TPtab
@@ -1147,33 +1036,33 @@ armor.MouseButton1Down:connect(function()
 	game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-935.32073974609, -28.500009536743, 561.83441162109)
 end)
 
-UICorner_32.CornerRadius = UDim.new(0, 4)
-UICorner_32.Parent = armor
+UICorner_30.CornerRadius = UDim.new(0, 4)
+UICorner_30.Parent = armor
 
-Shadow_16.Name = "Shadow"
-Shadow_16.Parent = armor
-Shadow_16.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Shadow_16.BorderSizePixel = 0
-Shadow_16.Size = UDim2.new(1, 0, 1, 4)
+Shadow_15.Name = "Shadow"
+Shadow_15.Parent = armor
+Shadow_15.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Shadow_15.BorderSizePixel = 0
+Shadow_15.Size = UDim2.new(1, 0, 1, 4)
 
-UICorner_33.CornerRadius = UDim.new(0, 4)
-UICorner_33.Parent = Shadow_16
+UICorner_31.CornerRadius = UDim.new(0, 4)
+UICorner_31.Parent = Shadow_15
 
-TextLabel_16.Parent = armor
-TextLabel_16.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_16.BackgroundTransparency = 1.000
-TextLabel_16.BorderColor3 = Color3.fromRGB(27, 42, 53)
-TextLabel_16.BorderSizePixel = 0
-TextLabel_16.Position = UDim2.new(0.524647892, 0, 0.473214269, 0)
-TextLabel_16.Size = UDim2.new(0.963524699, -20, 1.6250006, -20)
-TextLabel_16.ZIndex = 2
-TextLabel_16.Font = Enum.Font.FredokaOne
-TextLabel_16.Text = "Heavy Armor"
-TextLabel_16.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_16.TextScaled = true
-TextLabel_16.TextSize = 14.000
-TextLabel_16.TextWrapped = true
+TextLabel_15.Parent = armor
+TextLabel_15.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.BackgroundTransparency = 1.000
+TextLabel_15.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_15.BorderSizePixel = 0
+TextLabel_15.Position = UDim2.new(0.524647892, 0, 0.473214269, 0)
+TextLabel_15.Size = UDim2.new(0.963524699, -20, 1.6250006, -20)
+TextLabel_15.ZIndex = 2
+TextLabel_15.Font = Enum.Font.FredokaOne
+TextLabel_15.Text = "Heavy Armor"
+TextLabel_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_15.TextScaled = true
+TextLabel_15.TextSize = 14.000
+TextLabel_15.TextWrapped = true
 
 TextBox.Parent = TPtab
 TextBox.BackgroundColor3 = Color3.fromRGB(55, 206, 223)
@@ -1187,8 +1076,8 @@ TextBox.TextScaled = true
 TextBox.TextSize = 14.000
 TextBox.TextWrapped = true
 
-UICorner_34.CornerRadius = UDim.new(0, 4)
-UICorner_34.Parent = TextBox
+UICorner_32.CornerRadius = UDim.new(0, 4)
+UICorner_32.Parent = TextBox
 
 goto.Name = "goto"
 goto.Parent = TPtab
@@ -1205,38 +1094,36 @@ goto.TextSize = 14.000
 goto.TextWrapped = true
 goto.MouseButton1Down:connect(function()
 	local TargetPlr = TextBox.Text;
-	local A_1 =  .. TargetPlr .. "." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
-	wait(.30)
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[TargetPlr].Character.HumanoidRootPart.CFrame
 end)
 
-UICorner_35.CornerRadius = UDim.new(0, 4)
-UICorner_35.Parent = goto
+UICorner_33.CornerRadius = UDim.new(0, 4)
+UICorner_33.Parent = goto
 
-Shadow_17.Name = "Shadow"
-Shadow_17.Parent = goto
-Shadow_17.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Shadow_17.BorderSizePixel = 0
-Shadow_17.Size = UDim2.new(1, 0, 1, 4)
+Shadow_16.Name = "Shadow"
+Shadow_16.Parent = goto
+Shadow_16.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Shadow_16.BorderSizePixel = 0
+Shadow_16.Size = UDim2.new(1, 0, 1, 4)
 
-UICorner_36.CornerRadius = UDim.new(0, 4)
-UICorner_36.Parent = Shadow_17
+UICorner_34.CornerRadius = UDim.new(0, 4)
+UICorner_34.Parent = Shadow_16
 
-TextLabel_17.Parent = goto
-TextLabel_17.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_17.BackgroundTransparency = 1.000
-TextLabel_17.BorderColor3 = Color3.fromRGB(27, 42, 53)
-TextLabel_17.BorderSizePixel = 0
-TextLabel_17.Position = UDim2.new(0.524963796, 0, 0.473214269, 0)
-TextLabel_17.Size = UDim2.new(1.11908615, -20, 1.4821434, -20)
-TextLabel_17.ZIndex = 2
-TextLabel_17.Font = Enum.Font.FredokaOne
-TextLabel_17.Text = "Go to"
-TextLabel_17.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_17.TextScaled = true
-TextLabel_17.TextSize = 14.000
-TextLabel_17.TextWrapped = true
+TextLabel_16.Parent = goto
+TextLabel_16.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.BackgroundTransparency = 1.000
+TextLabel_16.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_16.BorderSizePixel = 0
+TextLabel_16.Position = UDim2.new(0.524963796, 0, 0.473214269, 0)
+TextLabel_16.Size = UDim2.new(1.11908615, -20, 1.4821434, -20)
+TextLabel_16.ZIndex = 2
+TextLabel_16.Font = Enum.Font.FredokaOne
+TextLabel_16.Text = "Go to"
+TextLabel_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_16.TextScaled = true
+TextLabel_16.TextSize = 14.000
+TextLabel_16.TextWrapped = true
 
 View.Name = "View"
 View.Parent = TPtab
@@ -1256,33 +1143,33 @@ View.MouseButton1Down:connect(function()
 	game.Workspace.Camera.CameraSubject = game.Players[TargetPlr].Character.Humanoid;
 end)
 
-UICorner_37.CornerRadius = UDim.new(0, 4)
-UICorner_37.Parent = View
+UICorner_35.CornerRadius = UDim.new(0, 4)
+UICorner_35.Parent = View
 
-Shadow_18.Name = "Shadow"
-Shadow_18.Parent = View
-Shadow_18.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Shadow_18.BorderSizePixel = 0
-Shadow_18.Size = UDim2.new(1, 0, 1, 4)
+Shadow_17.Name = "Shadow"
+Shadow_17.Parent = View
+Shadow_17.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Shadow_17.BorderSizePixel = 0
+Shadow_17.Size = UDim2.new(1, 0, 1, 4)
 
-UICorner_38.CornerRadius = UDim.new(0, 4)
-UICorner_38.Parent = Shadow_18
+UICorner_36.CornerRadius = UDim.new(0, 4)
+UICorner_36.Parent = Shadow_17
 
-TextLabel_18.Parent = View
-TextLabel_18.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_18.BackgroundTransparency = 1.000
-TextLabel_18.BorderColor3 = Color3.fromRGB(27, 42, 53)
-TextLabel_18.BorderSizePixel = 0
-TextLabel_18.Position = UDim2.new(0.503837049, 0, 0.473214269, 0)
-TextLabel_18.Size = UDim2.new(1.07683301, -20, 1.4821434, -20)
-TextLabel_18.ZIndex = 2
-TextLabel_18.Font = Enum.Font.FredokaOne
-TextLabel_18.Text = "View"
-TextLabel_18.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_18.TextScaled = true
-TextLabel_18.TextSize = 14.000
-TextLabel_18.TextWrapped = true
+TextLabel_17.Parent = View
+TextLabel_17.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_17.BackgroundTransparency = 1.000
+TextLabel_17.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_17.BorderSizePixel = 0
+TextLabel_17.Position = UDim2.new(0.503837049, 0, 0.473214269, 0)
+TextLabel_17.Size = UDim2.new(1.07683301, -20, 1.4821434, -20)
+TextLabel_17.ZIndex = 2
+TextLabel_17.Font = Enum.Font.FredokaOne
+TextLabel_17.Text = "View"
+TextLabel_17.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_17.TextScaled = true
+TextLabel_17.TextSize = 14.000
+TextLabel_17.TextWrapped = true
 
 unView.Name = "unView"
 unView.Parent = TPtab
@@ -1302,33 +1189,33 @@ unView.MouseButton1Down:connect(function()
 	game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
 end)
 
-UICorner_39.CornerRadius = UDim.new(0, 4)
-UICorner_39.Parent = unView
+UICorner_37.CornerRadius = UDim.new(0, 4)
+UICorner_37.Parent = unView
 
-Shadow_19.Name = "Shadow"
-Shadow_19.Parent = unView
-Shadow_19.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Shadow_19.BorderSizePixel = 0
-Shadow_19.Size = UDim2.new(1, 0, 1, 4)
+Shadow_18.Name = "Shadow"
+Shadow_18.Parent = unView
+Shadow_18.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Shadow_18.BorderSizePixel = 0
+Shadow_18.Size = UDim2.new(1, 0, 1, 4)
 
-UICorner_40.CornerRadius = UDim.new(0, 4)
-UICorner_40.Parent = Shadow_19
+UICorner_38.CornerRadius = UDim.new(0, 4)
+UICorner_38.Parent = Shadow_18
 
-TextLabel_19.Parent = unView
-TextLabel_19.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_19.BackgroundTransparency = 1.000
-TextLabel_19.BorderColor3 = Color3.fromRGB(27, 42, 53)
-TextLabel_19.BorderSizePixel = 0
-TextLabel_19.Position = UDim2.new(0.503837049, 0, 0.473214269, 0)
-TextLabel_19.Size = UDim2.new(1.07683301, -20, 1.4821434, -20)
-TextLabel_19.ZIndex = 2
-TextLabel_19.Font = Enum.Font.FredokaOne
-TextLabel_19.Text = "UnView"
-TextLabel_19.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_19.TextScaled = true
-TextLabel_19.TextSize = 14.000
-TextLabel_19.TextWrapped = true
+TextLabel_18.Parent = unView
+TextLabel_18.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_18.BackgroundTransparency = 1.000
+TextLabel_18.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_18.BorderSizePixel = 0
+TextLabel_18.Position = UDim2.new(0.503837049, 0, 0.473214269, 0)
+TextLabel_18.Size = UDim2.new(1.07683301, -20, 1.4821434, -20)
+TextLabel_18.ZIndex = 2
+TextLabel_18.Font = Enum.Font.FredokaOne
+TextLabel_18.Text = "UnView"
+TextLabel_18.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_18.TextScaled = true
+TextLabel_18.TextSize = 14.000
+TextLabel_18.TextWrapped = true
 
 hint.Name = "hint"
 hint.Parent = main
@@ -1361,7 +1248,7 @@ note.TextWrapped = true
 
 -- Scripts:
 
-local function WBDFRSC_fake_script() -- mainscripts.LocalScript 
+local function JBAF_fake_script() -- mainscripts.LocalScript 
 	local script = Instance.new('LocalScript', mainscripts)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -1374,8 +1261,8 @@ local function WBDFRSC_fake_script() -- mainscripts.LocalScript
 	end     script.Parent.Text = 'Open'
 	 end)
 end
-coroutine.wrap(WBDFRSC_fake_script)()
-local function XZIFSX_fake_script() -- Waypoints.LocalScript 
+coroutine.wrap(JBAF_fake_script)()
+local function AFOX_fake_script() -- Waypoints.LocalScript 
 	local script = Instance.new('LocalScript', Waypoints)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -1388,8 +1275,8 @@ local function XZIFSX_fake_script() -- Waypoints.LocalScript
 	end     script.Parent.Text = 'Open'
 	 end)
 end
-coroutine.wrap(XZIFSX_fake_script)()
-local function PAOEHU_fake_script() -- main.KeyPress 
+coroutine.wrap(AFOX_fake_script)()
+local function YDQW_fake_script() -- main.KeyPress 
 	local script = Instance.new('LocalScript', main)
 
 	--[[
@@ -1425,8 +1312,8 @@ local function PAOEHU_fake_script() -- main.KeyPress
 		
 	Mouse.KeyDown:Connect(PressQ) -- Make sure (PressQ) matches what you have for line 20. For Example: (PressH)
 end
-coroutine.wrap(PAOEHU_fake_script)()
-local function UWBSHDH_fake_script() -- main.Drag 
+coroutine.wrap(YDQW_fake_script)()
+local function GEVYYL_fake_script() -- main.Drag 
 	local script = Instance.new('LocalScript', main)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -1469,4 +1356,4 @@ local function UWBSHDH_fake_script() -- main.Drag
 		end
 	end)
 end
-coroutine.wrap(UWBSHDH_fake_script)()
+coroutine.wrap(GEVYYL_fake_script)()
